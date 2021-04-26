@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import TodoList from './components/TodoList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+/*
+  Todo Features: 
+  1. add todo
+  2. display todo
+  3. cross off todo
+  4. show number of active todos
+  5. filter  all/active/complete
+  6. delete todo
+  7. delete all complete 
+    7.1 only show if atleast one is complete
+  8. button  to toggle all on/off
+*/
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App" >
+        <h1>ToDo</h1>
+        <TodoList />
+      </div>
+    );
+  }
 }
 
 export default App;
